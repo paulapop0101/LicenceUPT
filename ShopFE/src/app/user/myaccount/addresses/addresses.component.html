@@ -1,0 +1,71 @@
+<div class="login-wrapper">
+    <div class="login-container">
+<div class="login-form">
+    <div class="login-title">Delivery address</div>
+    <form>
+    <div class="login-inputs">
+        <div class="input-spot">
+            <div class="login-label">City *</div>
+            <input type="text" [(ngModel)]="dAddress.city" name="emaill" class="simple-input">
+        </div>
+        <div class="input-spot">
+            <div class="login-label">Country *</div>
+            <input type="text"  [(ngModel)]="dAddress.country"  name="emallil" class="simple-input">
+        </div>
+        <div class="input-spot">
+            <div class="login-label">County *</div>
+            <input type="text"  [(ngModel)]="dAddress.county"  name="emlllail" class="simple-input">
+        </div>
+        <div class="input-spot">
+            <div class="login-label">Postal Code *</div>
+            <input type="text"  [(ngModel)]="dAddress.postalCode" name="emllllail" class="simple-input">
+        </div>
+        <div class="input-spot">
+            <div class="login-label">Street Line *</div>
+            <input type="text"  [(ngModel)]="dAddress.streetLine" name="emattil" class="simple-input">
+        </div>
+    </div>
+    
+</form>
+<div class="buttonsadd">
+    <button class="mybutton" style="padding-top:7px; padding-bottom:7px;background-color: white; color: black; margin-right: 1em" (click)="getAddresses()">Cancel</button>
+    <button class="mybutton" style="padding-top:7px; padding-bottom:7px;" (click)="addDAdd()">Save</button>
+</div>
+</div>
+</div>
+
+<div class="login-container">
+    <div class="login-form">
+        <div class="login-title">Billing address</div>
+        <form>
+            <div class="login-inputs">
+                <div class="input-spot">
+                    <div class="login-label">City *</div>
+                    <input type="text" [(ngModel)]="bAddress.city" name="emaail" class="simple-input">
+                </div>
+                <div class="input-spot">
+                    <div class="login-label">Country *</div>
+                    <input type="text"  [(ngModel)]="bAddress.country"  name="emsail" class="simple-input">
+                </div>
+                <div class="input-spot">
+                    <div class="login-label">County *</div>
+                    <input type="text"  [(ngModel)]="bAddress.county"  name="emcail" class="simple-input">
+                </div>
+                <div class="input-spot">
+                    <div class="login-label">Postal Code *</div>
+                    <input type="text"  [(ngModel)]="bAddress.postalCode" name="emdail" class="simple-input">
+                </div>
+                <div class="input-spot">
+                    <div class="login-label">Street Line *</div>
+                    <input type="text"  [(ngModel)]="bAddress.streetLine" name="eemail" class="simple-input">
+                </div>
+            </div>
+        
+    </form>
+    <div class="buttonsadd">
+        <button class="mybutton" style="padding-top:7px; padding-bottom:7px;background-color: white; color: black; margin-right: 1em" (click)="getAddresses()">Cancel</button>
+        <button class="mybutton" style="padding-top:7px; padding-bottom:7px;" (click)="addBAdd()">Save</button>
+    </div>
+    </div>
+    </div>
+</div>

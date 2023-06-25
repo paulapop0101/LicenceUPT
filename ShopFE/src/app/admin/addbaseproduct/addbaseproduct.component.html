@@ -1,0 +1,27 @@
+<div class="Dtitle">Create base product</div>
+<div class="addCatsection">
+    <div class="catTitle">Create base product</div>
+    <div class="catinputs">
+        <mat-form-field class="example-full-width" style="width: 100%;">
+            <mat-label>Product name*</mat-label>
+            <input matInput type="text"  [(ngModel)]="product.name">
+          </mat-form-field>
+          <mat-form-field style="width: 100%;">
+            <mat-label>Select subcategory*</mat-label>
+            <mat-select [(ngModel)]="product.subcategoryId">
+                <mat-option [value]="sub.id" *ngFor="let sub of subcategories">
+                 {{sub.categoryName}} / {{sub.name}}
+                </mat-option>
+            </mat-select>
+          </mat-form-field>
+        <mat-form-field class="example-full-width" style="width: 100%;">
+            <mat-label>Description*</mat-label>
+            <textarea matInput type="text" [(ngModel)]="product.description" ></textarea>
+          </mat-form-field>
+    </div>
+    <div class="catcontrols">
+        <div class="errorlabel" *ngIf="error!==''">{{error}}</div>
+        <button class="myadminbutton" (click)="addProduct()">Create</button>
+    </div>
+</div>
+

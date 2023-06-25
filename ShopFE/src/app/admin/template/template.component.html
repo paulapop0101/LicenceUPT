@@ -1,0 +1,115 @@
+<div class="sidebarA">
+    <div class="topside">
+        ShopItAll
+    </div>
+    <div class="scrollbar scrollbar-primary">
+    <div class="controls">
+        <div class="control-group">
+            General
+        </div>
+        <div class="control" (click)="showContent(0)">
+            <div class="control-wrapper">
+                <div class="control-icon"><mat-icon>dashboard</mat-icon></div>
+                <div class="control-text">Dashboard</div>
+            </div>
+        </div>
+        <div class="control">
+            <div class="control-wrapper">
+                <div class="control-icon"><mat-icon>settings</mat-icon></div>
+                <div class="control-text" (click)="showContent(1)">Edit shop</div>
+            </div>
+        </div>
+        <div class="control-group">
+            Cateory
+        </div>
+        <div class="control" (click)="showContent(2)">
+            <div class="control-wrapper">
+                <div class="control-icon"><mat-icon>category</mat-icon></div>
+                <div class="control-text">Categories</div>
+            </div>
+        </div>
+        <div class="control" (click)="showContent(3)">
+            <div class="control-wrapper">
+                <div class="control-icon"><mat-icon>add</mat-icon></div>
+                <div class="control-text">Add Category</div>
+            </div>
+        </div>
+
+        <div class="control-group">
+            Product
+        </div>
+        <div class="control" (click)="showContent(4)">
+            <div class="control-wrapper">
+                <div class="control-icon"><mat-icon>invert_colors</mat-icon></div>
+                <div class="control-text">Attributes</div>
+            </div>
+        </div>
+        <div class="control" (click)="showContent(5)">
+            <div class="control-wrapper">
+                <div class="control-icon"><mat-icon>star_border</mat-icon></div>
+                <div class="control-text">Base Products</div>
+            </div>
+        </div>
+        <div class="control" (click)="showContent(6)">
+            <div class="control-wrapper">
+                <div class="control-icon"><mat-icon>add</mat-icon></div>
+                <div class="control-text">Add base product</div>
+            </div>
+        </div>
+        <div class="control" (click)="showContent(7)">
+            <div class="control-wrapper">
+                <div class="control-icon"><mat-icon>star</mat-icon></div>
+                <div class="control-text">Final Products</div>
+            </div>
+        </div>
+        <div class="control" (click)="showContent(8)">
+            <div class="control-wrapper">
+                <div class="control-icon"><mat-icon>add</mat-icon></div>
+                <div class="control-text">Add Final Product</div>
+            </div>
+        </div>
+       
+        <div class="control-group" >
+            Orders
+        </div>
+        <div class="control" (click)="showContent(9)">
+            <div class="control-wrapper">
+                <div class="control-icon"><mat-icon>list</mat-icon></div>
+                <div class="control-text">Orders</div>
+            </div>
+        </div>
+        <div class="control-group">
+            Users
+        </div>
+        <div class="control" (click)="showContent(10)">
+            <div class="control-wrapper">
+                <div class="control-icon"><mat-icon>people</mat-icon></div>
+                <div class="control-text">Users</div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+<div class="containerA">
+    <div class="headerA">
+       <a (click)="logout()"><div class="logout"> <div class="logouttext"> LogOut </div><mat-icon>arrow_forward</mat-icon>
+       </div></a>
+    </div>
+    <div class="contentA">
+        <div class="contwrapper">
+            <app-dashboard *ngIf="content==0"></app-dashboard>
+            <app-editshop *ngIf="content==1"></app-editshop>
+            <app-category *ngIf="content==2"></app-category>
+            <app-addcategory *ngIf="content==3"></app-addcategory>
+            <app-atributes *ngIf="content==4"></app-atributes>
+            <app-baseproduct *ngIf="content==5"></app-baseproduct>
+            <app-addbaseproduct *ngIf="content==6"></app-addbaseproduct>
+            <app-variants *ngIf="content==7"></app-variants>
+            <app-addvariant *ngIf="content==8"></app-addvariant>
+            <app-orders *ngIf="content==9"></app-orders>
+            <app-users *ngIf="content==10"></app-users>
+        </div>
+    </div>
+    <!-- <div class="footerA"></div> -->
+</div>
+

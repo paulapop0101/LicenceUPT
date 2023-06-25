@@ -1,0 +1,48 @@
+.Dtitle{
+    color: #534686;
+    font-weight: 500;
+    font-size: 2em;
+}
+.editContent{
+    width: auto;
+    min-height: 5em;
+    background-color: white;
+    margin-top: 2em;
+    border-radius: 10px;
+    padding: 2em;
+}
+.cancelbutton{
+    margin-left: 1em;
+    width: 5em;
+    border: none;
+    padding:7px;
+    border-radius: 3px;
+    color: white;
+    background-color: dimgray;
+}
+.savebutton{
+    width: 5em;
+    border: none;
+    padding:7px;
+    border-radius: 3px;
+    background-color: #534686;
+    color: white;
+}
+.cancelbutton:hover{
+    cursor: pointer;
+}
+.savebutton:hover{
+    cursor: pointer;
+}
+.savebutton:active{
+    background-color: rgb(154, 124, 202);
+    transition: 0.4ms;
+}
+.cancelbutton:active{
+    background-color: rgb(186, 186, 186);
+    transition: 0.4ms;
+}
+.inputsection{
+    margin-bottom: 1em;
+    color: #534686;
+}

@@ -1,0 +1,10 @@
+<div class="home-body">
+    <app-header></app-header>
+    <div class="home-content">
+        <div class="home-content-wrapper">
+            <app-login *ngIf="active" (changeForm)="changeForm()" ></app-login>
+            <app-register *ngIf="!active" (changeForm)="changeForm()"></app-register>
+        </div>
+    </div>
+    <app-footer></app-footer>
+</div>

@@ -1,0 +1,134 @@
+.sidebarA{
+    // background-color: gray;
+    width: 15em;
+    position: fixed;
+    height: 100%;
+    box-shadow: 0 0 21px #59667a1a;
+    z-index: 10;
+}
+.containerA{
+    margin-left:15em;
+    height: 100%;
+    background-color: #eff3f9;
+
+}
+.headerA{
+    height: 4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    padding-right: 2em;
+    background-color: white;
+}
+.contentA{
+    background-color: #eff3f9;
+    width: 100%;
+}
+.contwrapper{
+    width: auto;
+    height: auto;
+    padding: 3em;
+    background-color: #eff3f9;
+}
+.footerA{
+    height: 3em;
+}
+.topside{
+    box-shadow: 0 0 21px #59667a1a;
+    height: 4.5em;
+    font-size: 1.3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.scrollbar {
+    float: left;
+    height: calc(100vh - 14em);
+    width: inherit;
+    background: #fff;
+    overflow-y: scroll;
+    margin-bottom: 25px;
+  }
+  
+  .scrollbar-primary::-webkit-scrollbar {
+    width: 3px;
+    background-color: #F5F5F5;
+  }
+  
+  .scrollbar-primary::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    background-color: #dcc4ff;
+  }
+  
+  .scrollbar-primary {
+    scrollbar-color:  #dcc4ff #F5F5F5;
+  }
+
+.controls{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.control-group{
+    width: 11em;
+    height: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    color: #534686;
+    border-radius: 7px;
+    font-weight: bolder;
+    font-size: 16px;
+    letter-spacing: 0.4px;
+    font-weight: 700;
+    background-color: #eff3f9;
+    padding-left: 1em;
+}
+.control{
+    width: 11em;
+    height: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    color: #353142;
+    border-radius: 7px;
+    font-size: 16px;
+    letter-spacing: 0.4px;
+    padding-left: 1em;
+}
+.control:hover{
+    cursor: pointer;
+    color:#534686;
+}
+.control-icon{
+    width: inherit;
+    float: left;
+}
+.control-text{
+    margin-left:2em;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.logout{
+    display: flex;
+    flex-direction: row;
+}
+.logout:hover{
+    color: #534686;
+    cursor: pointer;
+}
+.logouttext{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 0.7em;
+}

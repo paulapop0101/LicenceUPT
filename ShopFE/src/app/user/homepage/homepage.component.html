@@ -1,0 +1,32 @@
+<div class="home-body">
+<app-header></app-header>
+<div class="home-content">
+    <div class="home-content-wrapper">
+        <div class="home-section">
+            <img class="front-image" src="../../../assets/images/frontpage.jpeg">
+            <div class="home-image-text-wrapper">
+                <div class="home-image-text">
+                    <div class="home-image-text-title">Check our latest products</div>
+                    <button class="mybutton">Shop now</button>
+                </div>
+            </div>
+        </div>
+        <div class="home-sectionc">
+                <h2><span>Categories</span></h2>
+                <div class="homecategories">
+                    <div class="homecategory" [routerLink]="['/products', sub.id]" *ngFor="let sub of categories">
+                        <img class="front-image" [src]="urlMap.get(sub.id)">
+                        <div class="home-image-text-wrapperc">
+                            <div class="home-image-textc">
+                                <span>{{sub.categoryName}}</span> 
+                                <span>{{sub.name}}</span> 
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+</div>
+<app-footer></app-footer>
+</div>

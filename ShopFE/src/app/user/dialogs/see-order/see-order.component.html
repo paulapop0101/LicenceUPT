@@ -1,0 +1,53 @@
+<div class="mat-elevation-z8" style="box-shadow: none;">
+    <table mat-table [dataSource]="dataSource" >
+
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef >  </th>
+      <td mat-cell *matCellDef="let element"> 
+        <div class="cartproduct">
+            <img style="margin-top:10px;height: 10em; width: 7em;margin-bottom:10px;"  [src]="element.url">
+            <div class="productdescription">
+                <div class="pctitle">{{element.name}}</div>
+                <div class="pcattributes">
+                    <div class="pcattribute" *ngFor="let att of element.variant.assignedValues">{{att.attribute.name}}: {{att.value.value}}</div>
+                   
+                </div>
+            </div>
+        </div>
+    </td>
+    </ng-container>
+    
+
+     <!-- Weight Column -->
+     <ng-container matColumnDef="price">
+        <th mat-header-cell *matHeaderCellDef > Price </th>
+        <td mat-cell *matCellDef="let element"> {{element.price}}$ </td>
+      </ng-container>
+
+       <!-- Weight Column -->
+     <ng-container matColumnDef="quantity">
+        <th mat-header-cell *matHeaderCellDef > Quantity </th>
+        <td mat-cell *matCellDef="let element">
+            {{element.quantity}}
+             </td>
+      </ng-container>
+
+        <!-- Weight Column -->
+     <ng-container matColumnDef="subtotal">
+        <th mat-header-cell *matHeaderCellDef > Subtotal </th>
+        <td mat-cell *matCellDef="let element"> {{element.totalPrice}}$ </td>
+      </ng-container>
+
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    <ng-container >
+
+      <!-- <tr mat-row > here </tr> -->
+    </ng-container>
+    <!-- Row shown when there is no matching data. -->
+
+  </table>
+ </div>

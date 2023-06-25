@@ -1,0 +1,49 @@
+<div style="height: inherit; width: inherit; padding: 2em;">
+    <div class="Dtitle">Edit final product</div>
+    <div class="inputsections">
+        <mat-form-field class="example-full-width" style="width: 100%;">
+            <mat-label>Quantity*</mat-label>
+            <input matInput type="number" [(ngModel)] ="product.quantity" placeholder="15" min="0" >
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width" style="width: 100%;">
+            <mat-label>Price*</mat-label>
+            <input matInput type="number" [(ngModel)] ="product.price" placeholder="15" min="0" step="0.01">
+          </mat-form-field>
+
+        <div class="lable">Select attributes*</div>
+        <mat-form-field style="width: 100%;" >
+            <mat-label>Attributes</mat-label>
+            <mat-select [(ngModel)]="product.attributes" multiple >
+              <mat-optgroup
+                *ngFor="let attribute of attributes"
+                [label]="attribute.name"
+              >
+                <mat-option
+                 #matOption
+                  *ngFor="let value of attribute.values"
+                  [value]="value.id"
+                  (onSelectionChange)="disablegr(attribute,value,matOption)"
+                  [disabled]="selection.get(value.id)"
+                ><div >{{value.value}}</div>
+                </mat-option>
+              </mat-optgroup>
+            </mat-select>
+          </mat-form-field>
+          <label for="file-upload" class="custom-file-upload">
+            Upload picture
+         </label>
+          <input id="file-upload" type="file" mat-input (change)="handleUpload($event)" accept="image/png, image/jpeg">
+          <div *ngIf="name!=''">{{name}}</div>
+    </div>
+    <div style="color:red; width: 100%;margin-bottom: 1em;" *ngIf="error!==''">
+        {{error}}
+    </div>
+    <div class="controls" style="width: 100%;margin-bottom: 1em; ">
+        <div mat-dialog-actions>
+        <button class="savebutton" (click)="onSubmit()">Save</button>
+        <button class="cancelbutton" mat-dialog-close>Cancel</button>
+        </div>
+    </div>
+</div>
+

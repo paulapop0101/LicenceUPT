@@ -1,0 +1,85 @@
+<div class="Dtitle">Attributes</div>
+<div class="addCatsection">
+    <div class="catTitle">Create new attribute</div>
+    <div class="catinputs">
+        <mat-form-field class="example-full-width" style="width: 100%;">
+            <mat-label>Attribute name*</mat-label>
+            <input matInput type="text" [(ngModel)]="newAttribute.name" >
+          </mat-form-field>
+          
+    </div>
+    <div class="catcontrols">
+        <div class="errorlabel" *ngIf="error!==''">{{error}}</div>
+        <button class="myadminbutton" (click)="addAttribute()">Create</button>
+    </div>
+</div>
+<div class="attcontent">
+    <mat-accordion multi="true">
+        <mat-expansion-panel *ngFor="let attribute of attributes">
+            <mat-expansion-panel-header>
+            <mat-panel-title>
+               {{attribute.name}} <div *ngIf="attribute.isOnPDP" style="margin-left: 10px ;font-size: smaller; color: rgb(145, 145, 145)">Shown on PDP</div>
+            </mat-panel-title>
+            <mat-panel-description style="display: inline;">
+                <button *ngIf="attribute.name!=='color'" id="stopPropagation" style="float: right; z-index: 100;" (click)="deleteAttribute(attribute.id); $event.stopPropagation()" class="editbutton">Delete</button>
+                <button *ngIf="attribute.name!=='color'" id="stopPropagation" style="float: right; z-index: 100;" (click)="editAttribute(attribute); $event.stopPropagation()" class="deletebutton">Edit</button>
+            </mat-panel-description>
+            </mat-expansion-panel-header>
+           <!-- fffffffffffffffff -->
+           <mat-accordion multi="true">
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                <mat-panel-title>
+                   values
+                </mat-panel-title>
+                <mat-panel-description style="display: inline;">
+                    <button id="stopPropagation" style="float: right; z-index: 100;" (click)="newValue(attribute.id); $event.stopPropagation()" class="editbutton">New Value</button>
+                </mat-panel-description>
+                </mat-expansion-panel-header>
+                <div *ngFor="let value of attribute.values">
+                    <div class="catsubcategory">
+                        <div class="subcatitem">
+                            <div  style="float:left; line-height: 30px;">{{value.value}}</div>
+                           
+                            <div class="buttonscat">
+                                <button id="stopPropagation" style="float: right; z-index: 100;" (click)="deleteValue(value.id); $event.stopPropagation()" class="editbutton">Delete</button>
+                                <button id="stopPropagation" style="float: right; z-index: 100;" (click)="editValue(value,attribute.name); $event.stopPropagation()" class="deletebutton">Edit</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+            </mat-expansion-panel>
+            
+    
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                <mat-panel-title>
+                   subcategories
+                </mat-panel-title>
+                <mat-panel-description style="display: inline;">
+                    <button id="stopPropagation" style="float: right; z-index: 100;" (click)="newSubcat(attribute.id); $event.stopPropagation()" class="editbutton">New Subcategory</button>
+                </mat-panel-description>
+                </mat-expansion-panel-header>
+                <div *ngFor="let sub of attribute.subcategories">
+                <div class="catsubcategory" >
+                    <div class="subcatitem">
+                        <div style="float:left; line-height: 30px;">{{sub.name}}</div>
+                        <div class="buttonscat">
+                            <button id="stopPropagation" style="float: right; z-index: 100;" (click)="deleteSubcategory(attribute.id,sub); $event.stopPropagation()" class="editbutton">Delete</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="line"></div>
+            </div>
+                
+            </mat-expansion-panel>
+    
+           
+          </mat-accordion>
+        </mat-expansion-panel>
+        
+
+       
+      </mat-accordion>
+</div>

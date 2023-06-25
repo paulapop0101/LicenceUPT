@@ -1,0 +1,42 @@
+<div class="login-wrapper">
+    <div class="login-container">
+        <div class="login-form">
+            <div class="login-title">Register</div>
+            <form>
+            <div class="login-inputs" >
+
+                <div class="input-spot">
+                    <div class="login-label">First name *</div>
+                    <input type="text" [(ngModel)]="user.firstname" name="firstname"class="simple-input">
+                </div>
+                <div class="input-spot">
+                    <div class="login-label">Last name *</div>
+                    <input type="text" [(ngModel)]="user.lastname" name="lastname" class="simple-input">
+                </div>
+                <div class="input-spot">
+                    <div class="login-label">Email address *</div>
+                    <input type="text" [(ngModel)]="user.email" name="email"class="simple-input">
+                </div>
+                <div class="input-spot">
+                    <div class="login-label">Phone *</div>
+                    <input type="text" [(ngModel)]="user.phone" name="phone" class="simple-input">
+                </div>
+                <div class="input-spot">
+                    <div class="login-label">Password *</div>
+                    <input type="password" [(ngModel)]="user.password" name="pass"class="simple-input">
+                </div>
+                <div class="input-spot">
+                    <div class="login-label">Confirm Password *</div>
+                    <input type="password" [(ngModel)]="user.checkPassword" name="checkpass"class="simple-input">
+                </div>
+            </div>
+            <div class="subtitle">
+                Already have an account? <a class="redirectButton" (click)="goToLogin()">Login</a>
+            </div>
+            </form>
+            <button class="myFullbutton" (click)="validateRegister()">Register</button>
+       
+        </div>
+    </div>
+    
+</div>

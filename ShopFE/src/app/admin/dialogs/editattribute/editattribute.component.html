@@ -1,0 +1,23 @@
+
+<div style="height: inherit; width: inherit; padding: 2em;">
+    <div class="Dtitle">Edit attribute</div>
+    <div class="inputsections">
+        <div class="lable">Attribute name*</div>
+        <input class="simple-input" [(ngModel)] = "category.name">
+        <mat-checkbox
+        class="example-margin"
+        [(ngModel)]="category.isOnPDP"
+        indeterminate="false"
+        labelPosition="after">
+                Show on PDP <div style="margin-left: 10px ;font-size: smaller; color: rgb(145, 145, 145)">Attribute visible on product detail page</div>
+    </mat-checkbox>
+    </div>
+    <div style="color:red; width: 100%;margin-bottom: 1em;" *ngIf="error!==''">
+        {{error}}
+    </div>
+    <div class="controls" style="width: 100%;margin-bottom: 1em; ">
+
+        <button class="savebutton" (click)="onSubmit()">Save</button>
+        <button class="cancelbutton" (click)="close()">Cancel</button>
+    </div>
+</div>

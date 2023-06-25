@@ -1,0 +1,35 @@
+<div class="Dtitle">Create Categories</div>
+<div class="addCatsection">
+    <div class="catTitle">Create new category</div>
+    <div class="catinputs">
+        <mat-form-field class="example-full-width" style="width: 100%;">
+            <mat-label>Category name*</mat-label>
+            <input matInput type="text"  name="category" [(ngModel)]="newCategory">
+          </mat-form-field>
+    </div>
+    <div class="catcontrols">
+        <div class="errorlabel" *ngIf="error!==''">{{error}}</div>
+        <button class="myadminbutton" (click)="addCategory()">Create</button>
+    </div>
+</div>
+<div class="addCatsection">
+    <div class="catTitle">Create new subcategory</div>
+    <div class="catinputs">
+        <mat-form-field style="width: 100%;">
+            <mat-label>Select category*</mat-label>
+            <mat-select [(ngModel)] = "selectedId">
+                <mat-option [value]="cat.id" *ngFor="let cat of categories">
+                    {{cat.name}}
+                </mat-option>
+            </mat-select>
+          </mat-form-field>
+        <mat-form-field class="example-full-width" style="width: 100%;">
+            <mat-label>Subcategory name*</mat-label>
+            <input matInput type="text" [(ngModel)] = "newSubcategory" placeholder="subcategory name">
+          </mat-form-field>
+    </div>
+    <div class="catcontrols">
+        <div class="errorlabel" *ngIf="suberror!==''">{{suberror}}</div>
+        <button class="myadminbutton" (click)="addSubcategory()">Create</button>
+    </div>
+</div>

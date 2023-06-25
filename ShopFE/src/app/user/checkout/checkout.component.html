@@ -1,0 +1,143 @@
+<div class="contact-body">
+    <app-header></app-header>
+    <div class="contact-content">
+        <div class="contact-content-wrapper">
+            <div class="checkTitle"> Checkout Process</div>
+            <mat-stepper  #stepper>
+                <mat-step >
+                  <form >
+                    <ng-template matStepLabel>Delivery Address</ng-template>
+                    <div class="checkout-cont">
+                      <div class="formc">
+                      <form >
+                        <div class="login-inputs">
+                            <div class="input-spot">
+                                <div class="login-label">City *</div>
+                                <input type="text" [(ngModel)]="dAddress.city" name="emaill" class="simple-input">
+                            </div>
+                            <div class="input-spot">
+                                <div class="login-label">Country *</div>
+                                <input type="text"  [(ngModel)]="dAddress.country"  name="emallil" class="simple-input">
+                            </div>
+                            <div class="input-spot">
+                                <div class="login-label">County *</div>
+                                <input type="text"  [(ngModel)]="dAddress.county"  name="emlllail" class="simple-input">
+                            </div>
+                            <div class="input-spot">
+                                <div class="login-label">Postal Code *</div>
+                                <input type="text"  [(ngModel)]="dAddress.postalCode" name="emllllail" class="simple-input">
+                            </div>
+                            <div class="input-spot">
+                                <div class="login-label">Street Line *</div>
+                                <input type="text"  [(ngModel)]="dAddress.streetLine" name="emattil" class="simple-input">
+                            </div>
+                        </div>
+                        
+                    </form>
+                <button class="mybutton" style="float:left;padding-top:7px; padding-bottom:7px;background-color: white; color: black; margin-right: 1em" (click)="getAddresses()">Use Default Address</button>
+                    <div class="buttonsadd">
+                        
+                        <button class="mybutton" style="padding-top:7px; padding-bottom:7px;" matStepperNext >Next</button>
+                    </div>
+                    </div>
+                    </div>
+                    <div>
+                      <!-- <button mat-button matStepperNext>Next</button> -->
+                    </div>
+                  </form>
+                </mat-step>
+                <!--  -->
+                <!-- Step 2 -->
+                <!--  -->
+                <mat-step label="Invoice Address">
+                  <form >
+                    <ng-template matStepLabel>Invoice Address</ng-template>
+                    <div class="checkout-cont">
+                      <div class="formc">
+                      <form >
+                        <div class="login-inputs">
+                            <div class="input-spot">
+                                <div class="login-label">City *</div>
+                                <input type="text" [(ngModel)]="bAddress.city" name="emaill" class="simple-input">
+                            </div>
+                            <div class="input-spot">
+                                <div class="login-label">Country *</div>
+                                <input type="text"  [(ngModel)]="bAddress.country"  name="emallil" class="simple-input">
+                            </div>
+                            <div class="input-spot">
+                                <div class="login-label">County *</div>
+                                <input type="text"  [(ngModel)]="bAddress.county"  name="emlllail" class="simple-input">
+                            </div>
+                            <div class="input-spot">
+                                <div class="login-label">Postal Code *</div>
+                                <input type="text"  [(ngModel)]="bAddress.postalCode" name="emllllail" class="simple-input">
+                            </div>
+                            <div class="input-spot">
+                                <div class="login-label">Street Line *</div>
+                                <input type="text"  [(ngModel)]="bAddress.streetLine" name="emattil" class="simple-input">
+                            </div>
+                        </div>
+                        
+                    </form>
+                <button class="mybutton" style="float:left;padding-top:7px; padding-bottom:7px;background-color: white; color: black; margin-right: 1em" (click)="getAddresses()">Use Default Address</button>
+                    <div class="buttonsadd">
+                        
+                        <button class="mybutton" style="padding-top:7px; padding-bottom:7px;" matStepperNext >Next</button>
+                    </div>
+                    </div>
+                    </div>
+                    <div>
+                    </div>
+                  </form>
+                </mat-step>
+                <!--  -->
+                <!-- step3 -->
+                <!--  -->
+                <mat-step>
+                  <ng-template matStepLabel>Payment</ng-template>
+                  <div class="checkout-cont">
+                    <div class="checkoutdone">
+                      <div>
+                        <label id="example-radio-group-label">Payment type</label>
+                      
+                      <mat-radio-group aria-labelledby="example-radio-group-label"
+                      class="example-radio-group" [(ngModel)] = "payment">
+                        <mat-radio-button value="card">Card</mat-radio-button>
+                        <mat-radio-button value="cash">Cash</mat-radio-button>
+                      </mat-radio-group>
+                      </div>
+                      <div class="summary">
+                        <div class="summary-title">Summary</div>
+                        <div class="subtotal">
+                            <ul class="summary-details">
+                                <li>
+                                    <span>Subtotal</span>
+                                    <span class="price">${{cart.total_price}}</span>
+                                </li>
+                                <li>
+                                    <span>Shipping fee</span>
+                                    <span class="price">$10</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="total">
+                            <ul class="summary-details">
+                                <li style="padding-bottom:10px">
+                                    <span>Total</span>
+                                    <span class="price">${{cart.total_price}}</span>
+                                </li>
+                                <li>
+                                    <button class="myFullbutton" (click)="placeOrder()">Place Order</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    </div>
+                  </div>
+                </mat-step>
+              </mat-stepper>
+        </div>
+    </div>
+    <app-footer></app-footer>
+</div>

@@ -1,0 +1,37 @@
+.Dtitle{
+    color: #534686;
+    font-weight: 500;
+    font-size: 2em;
+}
+.varcontrols{
+    width: 100%;
+    background-color: red;
+}
+.button-container{
+    float: left;
+    width: 20em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 6em;
+}
+.search-container{
+    float: right;
+    width: 30em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    height: 6em;
+}
+.hh{
+    display: flex;
+    flex-direction: row;
+}
+.hehe{
+    margin-left: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

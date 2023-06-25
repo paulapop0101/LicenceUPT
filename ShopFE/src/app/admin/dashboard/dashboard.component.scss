@@ -1,0 +1,69 @@
+
+:host{
+    height: auto;
+}
+.Dtitle{
+    color: #534686;
+    font-weight: 500;
+    font-size: 2em;
+}
+.wids{
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 3em;
+}
+.wid{
+    background-color: white;
+    border-radius: 20px;
+    height: 8em;
+    width: 20em;
+    margin-left: 1em;
+    margin-right: 1em;
+    display: flex;
+    flex-direction: row;
+}
+.widicon{
+    flex:2;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.widiconw{
+    width: 4em;
+    height: 4em;
+    border-radius: 5px;
+    background-color: #eff3f9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #534686;
+    
+}
+.widtext{
+    flex:2;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.widtexttitle{
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #534686;
+    font-weight: 500;
+}
+.widtextnumber{
+    color: #988dc2;
+    font-weight: 500;
+}
+.chartsection{
+    margin-top:3em;
+    padding:1em;
+    background-color: white;
+    border-radius: 1em;
+}

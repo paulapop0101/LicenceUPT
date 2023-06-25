@@ -1,0 +1,71 @@
+
+.Dtitle{
+    color: #534686;
+    font-weight: 500;
+    font-size: 2em;
+}
+.attcontent{
+    margin-top: 2em;
+}
+.catcontent{
+    margin-top: 2em;
+
+}
+.stuffpanel{
+    width: auto;
+    
+}
+.editbutton{
+    margin-left: 1em;
+    min-width: 5em;
+    background-color: rgb(238, 57, 57);
+    border: none;
+    padding:7px;
+    border-radius: 3px;
+    color: white;
+}
+.deletebutton{
+    width: 5em;
+    border: none;
+    padding:7px;
+    border-radius: 3px;
+}
+.editbutton:hover{
+    cursor: pointer;
+}
+.deletebutton:hover{
+    cursor: pointer;
+}
+.catsubcategory{
+    display: flex;
+}
+.subcatitem{
+    width: 100%;
+}
+.line{
+    height: 1px;
+    background-color: rgb(184, 184, 184);
+    margin: 10px 0px 10px 0px;
+}
+.addCatsection{
+    width: auto;
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 2em;
+    padding: 2em;
+    color: #534686;
+}
+.catTitle{
+    width: auto;
+    color:#534686;
+    font-size: 1.3em;
+    font-weight: 400;
+    margin-bottom: 1em;
+}
+.catinputs{
+    margin-bottom: 1em;
+}
+.errorlabel{
+    margin: 10px;
+    color: red;
+}

@@ -1,0 +1,22 @@
+<div style="height: inherit; width: inherit; padding: 2em;">
+    <div class="Dtitle">New subcategory</div>
+    <div class="inputsections">
+        <mat-form-field style="width: 100%;">
+            <mat-label>Select subcategory*</mat-label>
+            <mat-select [(ngModel)] = "selectedId">
+                <mat-option [value]="sub.id" *ngFor="let sub of subcategories">
+                    {{sub.name}}
+                </mat-option>
+                
+            </mat-select>
+          </mat-form-field>
+    </div>
+    <div style="color:red; width: 100%;margin-bottom: 1em;" *ngIf="error!==''">
+        {{error}}
+    </div>
+    <div class="controls" style="width: 100%;margin-bottom: 1em; ">
+
+        <button class="savebutton" (click)="onSubmit()">Save</button>
+        <button class="cancelbutton" (click)="close()">Cancel</button>
+    </div>
+</div>

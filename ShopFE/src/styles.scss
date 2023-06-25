@@ -1,0 +1,65 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0;
+}
+
+html { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; display: flex; flex-direction: column;}
+.mybutton{
+    font-size:1em;
+    padding:1em 2em 1em 2em;
+    background-color: black;
+    color: white;
+}
+.mybutton:hover{
+    cursor: pointer;
+    background-color: transparent;
+    color: black;
+    transition: 0.5s;
+}
+.myFullbutton{
+    font-size:1em;
+    padding:1em 2em 1em 2em;
+    background-color: black;
+    color: white;
+    width: 100%;
+}
+.myFullbutton:hover{
+    cursor: pointer;
+    background-color: transparent;
+    color: black;
+    transition: 0.5s;
+}
+.simple-input{
+    width: -webkit-fill-available;
+    background-color: transparent;
+    border: 0.5px solid rgb(186, 186, 186);
+    font-size: 0.9em;
+    padding:0.7em;
+}
+.myadminbutton{
+    font-size:1em;
+    padding:1em 2em 1em 2em;
+    background-color: #534686;
+    border: 1px solid #534686;
+    color: white;
+    min-width: 8em;
+    border-radius: 10px;
+}
+.myadminbutton:hover{
+    cursor: pointer;
+    background-color: transparent;
+    color: #534686;
+    border: 1px solid #534686;
+    transition: 0.5s;
+}
+.mdc-text-field--filled:not(.mdc-text-field--disabled){
+    background-color: transparent!important;
+}
+.mat-mdc-checkbox.mat-accent {
+    --mdc-checkbox-selected-checkmark-color: #fff;
+    --mdc-checkbox-selected-focus-icon-color: #3f51b5;
+    --mdc-checkbox-selected-hover-icon-color: #3f51b5;
+    --mdc-checkbox-selected-icon-color: #3f51b5;
+    --mdc-checkbox-selected-pressed-icon-color: #3f51b5;
+}

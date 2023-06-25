@@ -1,0 +1,15 @@
+.contact-body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.contact-content{
+    position: relative;
+    display: inline;
+    height: 100%;
+}
+.contact-content-wrapper{
+    padding-left: 60px;
+    padding-right: 60px;
+    position: relative;
+}

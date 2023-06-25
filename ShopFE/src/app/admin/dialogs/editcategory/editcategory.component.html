@@ -1,0 +1,16 @@
+
+<div style="height: inherit; width: inherit; padding: 2em;">
+    <div class="Dtitle">Edit category</div>
+    <div class="inputsections">
+        <div class="lable">Category name*</div>
+        <input class="simple-input" [(ngModel)] = "category">
+    </div>
+    <div style="color:red; width: 100%;margin-bottom: 1em;" *ngIf="error!==''">
+        {{error}}
+    </div>
+    <div class="controls" style="width: 100%;margin-bottom: 1em; ">
+
+        <button class="savebutton" (click)="onSubmit()">Save</button>
+        <button class="cancelbutton" (click)="close()">Cancel</button>
+    </div>
+</div>

@@ -1,0 +1,63 @@
+<div class="home-body">
+    <app-header></app-header>
+    <div class="home-content">
+        <div class="home-content-wrapper">
+            <div class="filters">
+                <div class="titlef">
+                    Filters
+                    <button class="filterbutton" (click)="applyFilters()">Apply Filters</button>
+                    <button class="filterbutton" (click)="deleteFilters()">Remove Filters</button>
+                </div>
+                <div class="filter">
+                    <div class="filtername">
+                        Price
+                    </div>
+                    <div class="filteritem">
+                        <mat-slider min="0" max="300" step="10"  discrete >
+                            <input [(ngModel)]="lprice" matSliderStartThumb>
+                            <input [(ngModel)]="hprice" matSliderEndThumb>
+                          </mat-slider>
+                    </div>
+                </div>
+                <div class="filter" *ngFor="let att of attributes">
+                    <div class="filtername">
+                        {{att.name}}
+                    </div>
+                   
+                    <div >
+                    <div class="filteritem" *ngFor="let val of att.values" >
+                        <mat-checkbox style="height: 1em;"
+                            (change)="add($event.checked,att.id,val.id)"
+                        >{{val.value}}</mat-checkbox>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="products">
+                <form (ngSubmit)="submit()">
+                <div class="searchbar">
+                    <input type="search" [(ngModel)]="word" name="search" class="inputsearch" placeholder="Search...">
+                    <div class="searchicon"><mat-icon>search</mat-icon></div>
+                </div></form>
+                <div style="padding-top:3em;">
+                <mat-grid-list cols="4" rowHeight="1:1" gutterSize="10px">
+                    <mat-grid-tile *ngFor="let prod of products">
+                        <a style="width: inherit; height: inherit; text-decoration: none;" [routerLink]="['/product', prod.id]"><div class="product-cart">
+                            <div class="image-product"> 
+                                <img style="height: 100%;width: 100%;" [src]="prod.url">
+                            </div>
+                            <div class="text-product">
+                                <div class="title-product">{{prod.name}}</div>
+                                <div class="price-product">${{prod.price}}</div>
+                            </div>
+                        </div>
+                        </a>
+                    </mat-grid-tile>
+                    
+                  </mat-grid-list>
+                </div>
+            </div>
+        </div>
+    </div>
+    <app-footer></app-footer>
+</div>

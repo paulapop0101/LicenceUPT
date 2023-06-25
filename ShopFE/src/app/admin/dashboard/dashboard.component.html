@@ -1,0 +1,54 @@
+<div style="height:auto">
+<div class="Dtitle">Dashboard</div>
+<div class="dashcontent">
+    <div class="wids">
+        <div class="wid">
+            <div class="widicon">
+                <div class="widiconw">
+                    <mat-icon>card_travel</mat-icon>
+                </div>
+            </div>
+            <div class="widtext">
+                <div class="widtexttitle">Total Sales</div>
+                <div class="widtextnumber">{{sales}}</div>
+            </div>
+        </div>
+        <div class="wid">
+            <div class="widicon">
+                <div class="widiconw">
+                    <mat-icon>attach_money</mat-icon>
+                </div>
+            </div>
+            <div class="widtext">
+                <div class="widtexttitle">Total Income</div>
+                <div class="widtextnumber">${{income}}</div>
+            </div>
+        </div>
+        <div class="wid">
+            <div class="widicon">
+                <div class="widiconw">
+                    <mat-icon>list_alt</mat-icon>
+                </div>
+            </div>
+            <div class="widtext">
+                <div class="widtexttitle">Total Orders</div>
+                <div class="widtextnumber">{{orders}}</div>
+            </div>
+        </div>
+        <div class="wid">
+            <div class="widicon">
+                <div class="widiconw">
+                    <mat-icon>people</mat-icon>
+                </div>
+            </div>
+            <div class="widtext">
+                <div class="widtexttitle">Total Users</div>
+                <div class="widtextnumber">{{users}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="chartsection" *ngIf="loaded1 && loaded2">
+        <canvasjs-chart [options]="chartOptions" [styles]="{width: 'auto', height: '400px'}"></canvasjs-chart>    
+    </div>
+</div>
+</div>

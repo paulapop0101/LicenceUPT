@@ -1,0 +1,18 @@
+.cartproduct{
+    display: flex;
+    flex-direction: row;
+}
+.productdescription{
+    padding: 1em;
+    margin-left: 3em;
+}
+.pctitle{
+    font-size: 1.2em;
+    font-weight: 400;
+}
+.pcattributes{
+    margin-top: 5px;
+    display: flex;
+   flex-direction: column;
+    color: gray;
+}

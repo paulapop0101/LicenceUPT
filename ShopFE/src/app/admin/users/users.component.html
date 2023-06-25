@@ -1,0 +1,49 @@
+<div class="Dtitle">Users</div>
+<div class="addCatsection">
+    <div class="mat-elevation-z8" style="box-shadow: none;">
+        <table mat-table *ngIf="loaded && dataSource.data.length > 0" [dataSource]="dataSource"  >
+    
+    
+        <!-- Weight Column -->
+        
+    
+         <!-- Weight Column -->
+         <ng-container matColumnDef="email">
+            <th mat-header-cell *matHeaderCellDef > Email</th>
+            <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+          </ng-container>
+          <!-- Weight Column -->
+          <ng-container matColumnDef="firstname">
+            <th mat-header-cell *matHeaderCellDef > Firstname</th>
+            <td mat-cell *matCellDef="let element"> {{element.firstname}} </td>
+          </ng-container>
+    
+           <!-- Weight Column -->
+        
+    
+            <!-- Weight Column -->
+         <ng-container matColumnDef="lastname">
+            <th mat-header-cell *matHeaderCellDef > Lastname </th>
+            <td mat-cell *matCellDef="let element"> {{element.lastname}} </td>
+          </ng-container>
+          <ng-container matColumnDef="phone">
+            <th mat-header-cell *matHeaderCellDef > Phone </th>
+            <td mat-cell *matCellDef="let element"> {{element.phone}} </td>
+          </ng-container>
+    
+        <ng-container matColumnDef="total">
+            <th mat-header-cell *matHeaderCellDef > Total Orders </th>
+            <td mat-cell *matCellDef="let element;let i = index">
+                {{element.orders}}
+            </td>
+          </ng-container>
+    
+    
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+        <!-- Row shown when there is no matching data. -->
+    
+      </table>
+     </div>
+</div>

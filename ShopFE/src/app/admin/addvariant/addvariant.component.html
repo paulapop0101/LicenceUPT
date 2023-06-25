@@ -1,0 +1,53 @@
+<div class="Dtitle">Create final product</div>
+<div class="addCatsection">
+    <div class="catTitle">Create final product</div>
+    <div class="catinputs">
+        <mat-form-field style="width: 100%;">
+            <mat-label>Select base product*</mat-label>
+            <mat-select [(ngModel)] = "variant.product_id" (selectionChange)="getAssignedValues()">
+                <mat-option *ngFor="let pr of products" [value]="pr.id">
+                 {{pr.name}}
+                </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field class="example-full-width" style="width: 100%;">
+            <mat-label>Quantity*</mat-label>
+            <input matInput type="number" [(ngModel)] ="variant.quantity" placeholder="15" min="0" >
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width" style="width: 100%;">
+            <mat-label>Price*</mat-label>
+            <input matInput type="number" [(ngModel)] ="variant.price" placeholder="15" min="0" step="0.01">
+          </mat-form-field>
+
+        <div class="lable">Select attributes*</div>
+        <mat-form-field style="width: 100%;" >
+            <mat-label>Attributes</mat-label>
+            <mat-select [(ngModel)]="variant.attributes" multiple [disabled]="attributes.length > 0? false : true">
+              <mat-optgroup
+                *ngFor="let attribute of attributes"
+                [label]="attribute.name"
+              >
+                <mat-option
+                 #matOption
+                  *ngFor="let value of attribute.values"
+                  [value]="value.id"
+                  (onSelectionChange)="disablegr(attribute,value,matOption)"
+                  [disabled]="selection.get(value)"
+                >
+                  {{value.value}}
+                </mat-option>
+              </mat-optgroup>
+            </mat-select>
+          </mat-form-field>
+          <label for="file-upload" class="custom-file-upload">
+            Upload picture
+         </label>
+          <input id="file-upload" type="file" mat-input (change)="handleUpload($event)" accept="image/png, image/jpeg">
+          <div *ngIf="name!=''">{{name}}</div>
+    </div>
+    <div class="catcontrols">
+        <div class="errorlabel" *ngIf="error!==''">{{error}}</div>
+        <button class="myadminbutton" (click)="addProduct()">Create</button>
+    </div>
+</div>

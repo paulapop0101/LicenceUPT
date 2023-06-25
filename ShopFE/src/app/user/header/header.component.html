@@ -1,0 +1,23 @@
+<div class="user-header">
+    <div class="section-header-left">
+        <div class="header-item"><a routerLink="/home">Home</a></div>
+        <div class="header-item"><a  (mouseover)="showCategories()"> Categories</a></div>
+        <div class="header-categories" *ngIf="showCate" (mouseleave)="hideCategories()">
+            <div class="header-category" *ngFor="let cat of categories; let i = index" (mouseover)="showSubcategories(i, cat.subcategories)">
+                <div class="header-category-name">{{cat.name}}</div>
+                <mat-icon style="text-align:right; flex: 1">keyboard_arrow_right</mat-icon>
+            </div>
+            <div class="header-subcategories" *ngIf="showSubcat" [ngStyle]="{top: topValue}">
+                <div class="header-subcategory" *ngFor="let sub of subcategories"><a [routerLink]="['/products', sub.id]">{{sub.name}}</a></div>
+            </div>
+        </div>
+        <div class="header-item"><a routerLink="/contact"> Contact</a></div>
+    </div>
+    <div class="section-header-center"><a routerLink="/home">ShopItAll</a></div>
+    <div class="section-header-right">
+        <div class="header-item" *ngIf="!isLoggedIn"><a routerLink="/credentials">Sign in</a></div>
+        <div class="header-item" *ngIf="isLoggedIn"><a routerLink="/account">Account</a></div>
+        <div class="header-item" *ngIf="isLoggedIn"><a (click)="logOut()" style="cursor:pointer">Logout</a></div>
+        <div class="header-item"><a routerLink="/cart"> Cart ({{itemsCount}}) </a></div>
+    </div>
+</div>

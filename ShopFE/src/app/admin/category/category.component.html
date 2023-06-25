@@ -1,0 +1,37 @@
+<div class="Dtitle">Categories</div>
+<div class="catcontent">
+    <div style="margin-bottom: 1em;">
+    <button mat-button (click)="accordion!.openAll()">Expand All</button>
+    <button mat-button (click)="accordion!.closeAll()">Collapse All</button>
+    </div>
+    <mat-accordion multi="true">
+        <div *ngFor="let category of categories">
+        <mat-expansion-panel >
+            <mat-expansion-panel-header>
+            <mat-panel-title>
+               {{category.name}}
+            </mat-panel-title>
+            <mat-panel-description style="display: inline;">
+                <button id="stopPropagation" style="float: right; z-index: 100;" (click)="deleteCat(category.id); $event.stopPropagation()" class="editbutton">Delete</button>
+                <button id="stopPropagation" style="float: right; z-index: 100;" (click)="openDialog(category); $event.stopPropagation()" class="deletebutton">Edit</button>
+            </mat-panel-description>
+            </mat-expansion-panel-header>
+            <div *ngFor="let subcategory of category.subcategories">
+                <div class="catsubcategory">
+                    <div class="subcatitem">
+                        <div style="float:left; line-height: 30px;">{{subcategory.name}}</div>
+                        <div class="buttonscat">
+                            <button id="stopPropagation" style="float: right; z-index: 100;" (click)="deleteSubcat(subcategory.id); $event.stopPropagation()" class="editbutton">Delete</button>
+                            <button id="stopPropagation" style="float: right; z-index: 100;" (click)="openDialogSub(subcategory); $event.stopPropagation()" class="deletebutton">Edit</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="line"></div>
+            </div>
+           
+
+        
+        </mat-expansion-panel>
+    </div>
+      </mat-accordion>
+</div>

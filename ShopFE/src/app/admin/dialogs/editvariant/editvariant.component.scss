@@ -1,0 +1,45 @@
+.Dtitle{
+    color: #534686;
+    font-weight: 500;
+    font-size: 2em;
+}
+.inputsections{
+    margin: 2em 0 1em 0;
+    color: #534686;
+}
+.cancelbutton{
+    margin-left: 1em;
+    width: 5em;
+    border: none;
+    padding:7px;
+    border-radius: 3px;
+    color: white;
+    background-color: dimgray;
+}
+.savebutton{
+    width: 5em;
+    border: none;
+    padding:7px;
+    border-radius: 3px;
+    background-color: #534686;
+    color: white;
+}
+.cancelbutton:hover{
+    cursor: pointer;
+}
+.savebutton:hover{
+    cursor: pointer;
+}
+input[type="file"] {
+    display: none;
+}
+.custom-file-upload {
+    border: 2px dotted #534686;
+    display: flex;
+    justify-content: center;
+    padding: 12px 12px;
+    cursor: pointer;
+    width: -webkit-fill-available;
+    background-color: #ece7ff;
+    color: gray;
+}

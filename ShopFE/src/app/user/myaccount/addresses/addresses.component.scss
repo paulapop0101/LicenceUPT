@@ -1,0 +1,42 @@
+.login-wrapper{
+    display: flex;
+    justify-content: center;
+    width: 75%;
+    margin: auto;
+    margin-bottom:70px;
+}
+.login-container{
+    width: 35%;
+    height: 22em;
+    padding: 60px;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+.login-form{
+    display: flex;
+    flex-direction: column;
+}
+.login-title{
+    padding:1em;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+}
+.login-inputs{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+}
+.input-spot{
+    width: 100%;
+    margin-bottom:1em;
+    color: rgb(69, 69, 69);
+}
+.subtitle{
+    color: rgb(69, 69, 69);
+    margin-bottom:1em
+}
+.redirectButton:hover{
+    cursor: pointer;
+    color:black
+}
